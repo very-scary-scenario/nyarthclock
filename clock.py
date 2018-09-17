@@ -40,7 +40,7 @@ def get_time():
     if (now.hour, now.minute) == (13, 37):
         return annotate(format_time(now))
     elif random() < (1/(24*60)):
-        if (now.hour, now.minute) == (13, 36) or (now.hour, now.minute) == (13, 38):
+        if (now.hour, now.minute) in ((13, 36), (13, 38)):
             return format_time(now) + ' DX'
         else:
             return format_time(now)
@@ -52,3 +52,4 @@ if __name__ == '__main__':
     time = get_time()
     if time is not None:
         print(time)
+
